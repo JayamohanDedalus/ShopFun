@@ -3,4 +3,12 @@
     <string name="title_activity_generate_order">GenerateOrder</string>
     <string name="title_activity_order_details">OrderDetails</string>
     <string name="title_activity_order_product_details">OrderProductDetails</string>
+    <string name="title_activity_service_broadcast">ServiceBroadcast</string>
+    <string name="title_activity_order_confirm">OrderConfirm</string>
+    <string name="title_activity_learn_kotlin">LearnKotlin</string>
+    <string name="title_activity_service">ServiceActivity</string>
+    <string name="title_activity_background_service">BackgroundService</string>
+    <string name="title_activity_service_foreground">ServiceForeground</string>
+    <string name="title_activity_broadcast_receiver">BroadcastReceiverActivity</string>
+    <string name="title_activity_cpcontent_provider">CPContentProviderActivity</string>
 </resources>

@@ -11,4 +11,5 @@
     <string name="title_activity_service_foreground">ServiceForeground</string>
     <string name="title_activity_broadcast_receiver">BroadcastReceiverActivity</string>
     <string name="title_activity_cpcontent_provider">CPContentProviderActivity</string>
+    <string name="title_activity_work_manager">WorkManagerActivity</string>
 </resources>

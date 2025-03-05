@@ -1,5 +1,10 @@
 package com.shopfun
 
+/*
+    Content Resolver call from another application is written in TrainingApp project.
+    Refer files CPContentResolverActivity.kt and AndroidManifest.xml.
+*/
+
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log

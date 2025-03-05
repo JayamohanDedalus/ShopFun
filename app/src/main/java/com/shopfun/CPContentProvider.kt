@@ -6,7 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.net.Uri
 
-class CPContentProvider : ContentProvider() {
+    class CPContentProvider : ContentProvider() {
     companion object {
         const val AUTHORITY = "com.shopfun.ContentProvider"
         val CONTENT_URI: Uri = Uri.parse("content://$AUTHORITY/quotes")

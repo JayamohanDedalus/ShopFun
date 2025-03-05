@@ -27,27 +27,31 @@
         android:theme="@style/Theme.ShopFun"
         tools:targetApi="31">
         <activity
-            android:name=".CPContentProviderActivity"
+            android:name=".WorkManager.WorkManagerActivity"
             android:exported="true"
-            android:label="@string/title_activity_cpcontent_provider"
+            android:label="@string/title_activity_work_manager"
             android:theme="@style/Theme.ShopFun" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".CPContentProviderActivity"
+            android:exported="true"
+            android:label="@string/title_activity_cpcontent_provider"
+            android:theme="@style/Theme.ShopFun">
         </activity>
         <activity
             android:name=".BroadcastReceiverActivity"
             android:exported="true"
             android:label="@string/title_activity_broadcast_receiver"
-            android:theme="@style/Theme.ShopFun">
-        </activity>
+            android:theme="@style/Theme.ShopFun"></activity>
         <activity
             android:name=".ServiceActivity"
             android:exported="true"
             android:label="@string/title_activity_service"
-            android:theme="@style/Theme.ShopFun"></activity>
+            android:theme="@style/Theme.ShopFun" />
         <activity
             android:name=".OrderConfirm"
             android:exported="true"
@@ -83,15 +87,12 @@
             android:name=".ServiceForeground"
             android:exported="false"
             android:foregroundServiceType="mediaPlayback"
-            android:permission="android.permission.FOREGROUND_SERVICE" />
-
-        <!--android:exported = "true" data shared across app. "false" data shared within app.-->
+            android:permission="android.permission.FOREGROUND_SERVICE" /> <!-- android:exported = "true" data shared across app. "false" data shared within app. -->
         <provider
             android:name=".CPContentProvider"
             android:authorities="com.shopfun.ContentProvider"
             android:exported="true"
-            android:grantUriPermissions="true"
-            />
+            android:grantUriPermissions="true" />
     </application>
 
 </manifest>

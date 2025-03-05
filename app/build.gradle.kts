@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.media3.common.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -63,17 +64,22 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    /* WorkManager */
+    implementation(libs.androidx.work.runtime.ktx)
+
+    /* ksp implementation for room database */
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
     ksp(libs.androidx.room.ktx)
 
+    /* kapt implementation for room database */
 //    kapt(libs.androidx.room.compiler)
 //    kapt (libs.androidx.room.ktx)
-
+//
 //    kapt "androidx.room:room-compiler:2.4.2"
 //    implementation "androidx.room:room-runtime:2.4.2"
 //    implementation "androidx.room:room-ktx:2.4.2"
-
+//
 //    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0"  // or the latest version
 
 }

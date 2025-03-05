@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!--
+          Required Foreground Service permission: POST_NOTIFICATIONS, FOREGROUND_SERVICE,
+        FOREGROUND_SERVICE_MEDIA_PLAYBACK (depending on foreground service type)
+    -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -13,32 +27,72 @@
         android:theme="@style/Theme.ShopFun"
         tools:targetApi="31">
         <activity
-            android:name=".OrderProductDetails"
+            android:name=".WorkManager.WorkManagerActivity"
             android:exported="true"
-            android:label="@string/title_activity_order_product_details"
-            android:theme="@style/Theme.ShopFun">
-        </activity>
-        <activity
-            android:name=".OrderDetails"
-            android:exported="true"
-            android:label="@string/title_activity_order_details"
-            android:theme="@style/Theme.ShopFun">
-        </activity>
-        <activity
-            android:name=".GenerateOrder"
-            android:exported="true"
-            android:label="@string/title_activity_generate_order"
-            android:theme="@style/Theme.ShopFun">
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.ShopFun">
+            android:label="@string/title_activity_work_manager"
+            android:theme="@style/Theme.ShopFun" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CPContentProviderActivity"
+            android:exported="true"
+            android:label="@string/title_activity_cpcontent_provider"
+            android:theme="@style/Theme.ShopFun">
+        </activity>
+        <activity
+            android:name=".BroadcastReceiverActivity"
+            android:exported="true"
+            android:label="@string/title_activity_broadcast_receiver"
+            android:theme="@style/Theme.ShopFun"></activity>
+        <activity
+            android:name=".ServiceActivity"
+            android:exported="true"
+            android:label="@string/title_activity_service"
+            android:theme="@style/Theme.ShopFun" />
+        <activity
+            android:name=".OrderConfirm"
+            android:exported="true"
+            android:label="@string/title_activity_order_confirm"
+            android:theme="@style/Theme.ShopFun" />
+        <!--
+        <activity
+            android:name=".ServiceBroadcast"
+            android:exported="false"
+            android:label="@string/title_activity_service_broadcast"
+            android:theme="@style/Theme.ShopFun"
+            tools:ignore="Instantiatable" />
+        -->
+        <activity
+            android:name=".OrderDetails"
+            android:exported="true"
+            android:label="@string/title_activity_order_details"
+            android:theme="@style/Theme.ShopFun" />
+        <activity
+            android:name=".GenerateOrder"
+            android:exported="true"
+            android:label="@string/title_activity_generate_order"
+            android:theme="@style/Theme.ShopFun" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ShopFun" />
+
+        <service
+            android:name=".ServiceBackground"
+            android:exported="false" />
+        <service
+            android:name=".ServiceForeground"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback"
+            android:permission="android.permission.FOREGROUND_SERVICE" /> <!-- android:exported = "true" data shared across app. "false" data shared within app. -->
+        <provider
+            android:name=".CPContentProvider"
+            android:authorities="com.shopfun.ContentProvider"
+            android:exported="true"
+            android:grantUriPermissions="true" />
     </application>
 
 </manifest>

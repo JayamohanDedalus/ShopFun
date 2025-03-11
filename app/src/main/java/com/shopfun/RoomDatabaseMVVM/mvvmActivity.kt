@@ -71,12 +71,6 @@ class mvvmActivity : ComponentActivity() {
 
         setContent {
             ShopFunTheme {
-//                var productName by remember { mutableStateOf("") }
-//                var productDescription by remember { mutableStateOf("") }
-//                var productPrice by remember { mutableStateOf("") }
-//                val context = LocalContext.current
-//                var products: List<mvvmProduct>? = null
-
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
                     productViewModel?.let { productViewModel ->
@@ -172,6 +166,10 @@ class mvvmActivity : ComponentActivity() {
                     Text("Add Product")
                 }
 
+                // Though fetchAllProducts is returning LiveData of Products list, it is not required
+                //      to call the function everytime i.e., for any change in DB data
+                //      this will be called and UI refreshed for new data.
+/*
                 configViewModel.products = fetchAllProducts(productViewModel, context)
                 Button(
                     onClick = {
@@ -185,10 +183,13 @@ class mvvmActivity : ComponentActivity() {
                 ) {
                     Text("View Products")
                 }
+*/
             }
+//            ProductLazyGrid(configViewModel.products)
 
+            val products = fetchAllProducts(productViewModel, context)
             // Populate Grid with Products added
-            ProductLazyGrid(configViewModel.products)
+            ProductLazyGrid(products)
         }
     }
 }

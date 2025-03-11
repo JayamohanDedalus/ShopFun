@@ -9,5 +9,5 @@ class mvvmConfigViewModel : ViewModel() {
     var productName by mutableStateOf("")
     var productDescription by mutableStateOf("")
     var productPrice by mutableStateOf("")
-    var products : List<mvvmProduct> by mutableStateOf(emptyList())
+//    var products : List<mvvmProduct> by mutableStateOf(emptyList())
 }

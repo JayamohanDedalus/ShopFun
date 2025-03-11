@@ -54,11 +54,11 @@ class WorkManagerActivity : ComponentActivity() {
 /*
         Test Observation:
         OneTimeWorkRequest -
-        1. OneTime button works with notification only once per app execution i.e. first time onClick.
+        1. OneTime button works with notification only once per app execution i.e. first time Button Click.
             Probably the objects should set to "remember by mutable".
-        2. When application is not active, Notification is received. But only for first time click.
-        3. When application is closed, Notification is received. But only for first time click.
-        4. When device is restarted, Notification is received only when app is opened after device restart. But only for first time click.
+        2. Even when application is not active, Notification is received. But only for first time click.
+        3. Even when application is closed, Notification is received. But only for first time click.
+        4. Even when device is restarted, Notification is received only when app is opened after device restart.
 */
 
         val oneTimeWorkRequest = OneTimeWorkRequestBuilder<WorkerEvent>()

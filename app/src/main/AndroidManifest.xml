@@ -27,26 +27,32 @@
         android:theme="@style/Theme.ShopFun"
         tools:targetApi="31">
         <activity
-            android:name=".WorkManager.WorkManagerActivity"
+            android:name=".RoomDatabaseMVVM.mvvmActivity"
             android:exported="true"
-            android:label="@string/title_activity_work_manager"
+            android:label="@string/title_activity_mvvm"
             android:theme="@style/Theme.ShopFun" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".WorkManager.WorkManagerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_work_manager"
+            android:theme="@style/Theme.ShopFun">
         </activity>
         <activity
             android:name=".CPContentProviderActivity"
             android:exported="true"
             android:label="@string/title_activity_cpcontent_provider"
-            android:theme="@style/Theme.ShopFun">
-        </activity>
+            android:theme="@style/Theme.ShopFun"></activity>
         <activity
             android:name=".BroadcastReceiverActivity"
             android:exported="true"
             android:label="@string/title_activity_broadcast_receiver"
-            android:theme="@style/Theme.ShopFun"></activity>
+            android:theme="@style/Theme.ShopFun" />
         <activity
             android:name=".ServiceActivity"
             android:exported="true"

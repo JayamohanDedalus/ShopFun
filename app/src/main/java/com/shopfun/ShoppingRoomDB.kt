@@ -14,8 +14,7 @@ abstract class ShoppingRoomDB : RoomDatabase() {
     abstract fun daoOrder(): OrderDAO
 
     companion object {
-        // Singleton prevents multiple instances of database opening at the
-        // same time.
+        // Singleton prevents multiple instances of database opening at the same time.
 //        private var dbinstance: ShoppingRoomDB? = null
         @Volatile
         private var INSTANCE: ShoppingRoomDB? = null
@@ -44,7 +43,7 @@ abstract class ShoppingRoomDB : RoomDatabase() {
                     "ShoppingRoomDB"
                 ).addMigrations(migration).build()
                 INSTANCE = instance
-                // return instance
+                                                                                                                                                                                                                                                                                                                            // return instance
                 instance
             }
 

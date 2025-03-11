@@ -192,6 +192,15 @@ fun ListOrders(context : Context, OrderByIds : List<Int>?) {
     }
 }
 
+suspend fun fetchAllOrderIds(context: Context): List<Int> {
+    //Get All Order
+    val db = ShoppingRoomDB.getDatabase(context)
+    val orderDAO = db.daoOrder()
+
+    val orderById: List<Int> = orderDAO.getAllOrderIds()
+    return orderById
+}
+
 suspend fun fetchProductIdsByOrderId(context: Context, orderId: Int): List<Int> {
     //Get Order Item Details
     val db = ShoppingRoomDB.getDatabase(context)

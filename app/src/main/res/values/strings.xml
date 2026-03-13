@@ -17,6 +17,6 @@
     <string name="btn_go_to_products">Go To Products</string>
     <string name="label_add_cart">Add to cart</string>
     <string name="label_select_order">Select Order</string>
-    <string name="label_selected_product_ids">Selected Product IDs: %s</string>
-    <string name="label_order_item">Order - %d</string>
+    <string name="label_selected_product_ids">Selected Product IDs: %1$s</string>
+    <string name="label_order_item">Order - %1$d</string>
 </resources>

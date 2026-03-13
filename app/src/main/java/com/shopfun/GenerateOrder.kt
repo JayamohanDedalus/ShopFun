@@ -47,6 +47,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -73,7 +74,7 @@ class GenerateOrder : ComponentActivity() {
                         horizontalAlignment = Alignment.CenterHorizontally
                     )
                     {
-                        Text("Selected Product IDs: ${CartCheckedIds.value.joinToString(", ")}")
+                        Text(stringResource(R.string.label_selected_product_ids, CartCheckedIds.value.joinToString(", ")))
 
                         var isClicked by remember { mutableStateOf(false) }
 
@@ -91,7 +92,7 @@ class GenerateOrder : ComponentActivity() {
                                 .padding(top = 8.dp, start = 8.dp, end = 8.dp)
                                 .width(200.dp)
                         ) {
-                            Text("Generate Order")
+                            Text(stringResource(R.string.btn_generate_order))
                         }
 
                         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly)
@@ -106,7 +107,7 @@ class GenerateOrder : ComponentActivity() {
                                     .padding(top = 4.dp)
                                     .width(200.dp)
                             ) {
-                                Text("View Orders")
+                                Text(stringResource(R.string.btn_view_orders))
                             }
 
                             // Go to Add Products
@@ -119,7 +120,7 @@ class GenerateOrder : ComponentActivity() {
                                     .padding(top = 4.dp)
                                     .width(200.dp)
                             ) {
-                                Text("Go To Products")
+                                Text(stringResource(R.string.btn_go_to_products))
                             }
                         }
 
@@ -253,7 +254,7 @@ fun ProductListItem(product: Product, CartCheckedIds: MutableState<List<Int>>) {
                 horizontalArrangement = Arrangement.Center
             )
             {
-                Text(text = "Add Cart")//, Modifier.border(2.dp, SolidColor(Color.Blue), CutCornerShape(5.dp)))
+                Text(text = stringResource(R.string.label_add_cart))//, Modifier.border(2.dp, SolidColor(Color.Blue), CutCornerShape(5.dp)))
                 Checkbox(//modifier = Modifier.border(2.dp, SolidColor(Color.Blue), CutCornerShape(5.dp)),
                     checked = CartCheckedIds.value.contains(product.id),
                     onCheckedChange = {

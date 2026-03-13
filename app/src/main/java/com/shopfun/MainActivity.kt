@@ -53,6 +53,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.lifecycleScope
@@ -87,12 +88,12 @@ class MainActivity : ComponentActivity() {
                             verticalAlignment = Alignment.CenterVertically
                         )
                         {
-                            Text(modifier = Modifier.width(160.dp), text = "Product Name")
+                            Text(modifier = Modifier.width(160.dp), text = stringResource(R.string.product_name))
                             OutlinedTextField(
                                 modifier = Modifier.width(260.dp),
                                 value = productName,
-                                label = { Text(text = "Product Name") },
-                                placeholder = { Text(text = "Enter Product Name") },
+                                label = { Text(text = stringResource(R.string.product_name)) },
+                                placeholder = { Text(text = stringResource(R.string.hint_enter_product_name)) },
                                 onValueChange = { productName = it },
                             )
                         }
@@ -104,11 +105,11 @@ class MainActivity : ComponentActivity() {
                             verticalAlignment = Alignment.CenterVertically
                         )
                         {
-                            Text(modifier = Modifier.width(160.dp), text = "Product Description")
+                            Text(modifier = Modifier.width(160.dp), text = stringResource(R.string.product_description))
                             OutlinedTextField(modifier = Modifier.width(260.dp),
                                 value = productDescription,
-                                label = { Text(text = "Product Description") },
-                                placeholder = { Text(text = "Enter Product Description") },
+                                label = { Text(text = stringResource(R.string.product_description)) },
+                                placeholder = { Text(text = stringResource(R.string.hint_enter_product_description)) },
                                 onValueChange = { productDescription = it }
                             )
                         }
@@ -120,11 +121,11 @@ class MainActivity : ComponentActivity() {
                             verticalAlignment = Alignment.CenterVertically
                         )
                         {
-                            Text(modifier = Modifier.width(160.dp), text = "Product Price")
+                            Text(modifier = Modifier.width(160.dp), text = stringResource(R.string.product_price))
                             OutlinedTextField(modifier = Modifier.width(260.dp),
                                 value = productPrice,
-                                label = { Text(text = "Product Price") },
-                                placeholder = { Text(text = "Enter Product Price") },
+                                label = { Text(text = stringResource(R.string.product_price)) },
+                                placeholder = { Text(text = stringResource(R.string.hint_enter_product_price)) },
                                 onValueChange = { productPrice = it }
                             )
                         }
@@ -154,7 +155,7 @@ class MainActivity : ComponentActivity() {
                                     .padding(top = 4.dp)
                                     .width(200.dp)
                             ) {
-                                Text("Add Product")
+                                Text(stringResource(R.string.btn_add_product))
                             }
 
                             Button(
@@ -171,7 +172,7 @@ class MainActivity : ComponentActivity() {
                                     .padding(top = 4.dp)
                                     .width(200.dp)
                             ) {
-                                Text("View Products")
+                                Text(stringResource(R.string.btn_view_products))
                             }
                         }
 
@@ -187,7 +188,7 @@ class MainActivity : ComponentActivity() {
                                     .padding(top = 4.dp)
                                     .width(200.dp)
                             ) {
-                                Text("Order Products")
+                                Text(stringResource(R.string.btn_order_products))
                             }
 
                             // Go to View Orders
@@ -200,7 +201,7 @@ class MainActivity : ComponentActivity() {
                                     .padding(top = 4.dp)
                                     .width(200.dp)
                             ) {
-                                Text("View Orders")
+                                Text(stringResource(R.string.btn_view_orders))
                             }
                         }
 

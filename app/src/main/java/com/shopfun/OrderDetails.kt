@@ -37,6 +37,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -76,7 +77,7 @@ class OrderDetails : ComponentActivity() {
                                 },
                                 modifier = Modifier.padding(top = 4.dp).width(200.dp)
                             ) {
-                                Text("Go To Products")
+                                Text(stringResource(R.string.btn_go_to_products))
                             }
 
                             // Go to Order Products
@@ -87,7 +88,7 @@ class OrderDetails : ComponentActivity() {
                                 },
                                 modifier = Modifier.padding(top = 4.dp).width(200.dp)
                             ) {
-                                Text("Order Products")
+                                Text(stringResource(R.string.btn_order_products))
                             }
                         }
 
@@ -132,9 +133,9 @@ fun ListOrders(context : Context, OrderByIds : List<Int>?) {
                     horizontalArrangement = Arrangement.Start
                 )
                 {
-                    Text(text = "Select Order")
+                    Text(text = stringResource(R.string.label_select_order))
                     IconButton(onClick = { expanded = !expanded }) {
-                        Icon(Icons.Default.MoreVert, contentDescription = "Select Order")
+                        Icon(Icons.Default.MoreVert, contentDescription = stringResource(R.string.label_select_order))
                     }
                     if (selectedOption.value != null && selectedOption.value != "") {
                         Text(color = Color.Blue, style = TextStyle(fontSize = 20.sp),
@@ -159,7 +160,7 @@ fun ListOrders(context : Context, OrderByIds : List<Int>?) {
                     ) {
                         OrderByIds.forEach { option ->
                             DropdownMenuItem(
-                                text = { Text("Order - $option") },
+                                text = { Text(stringResource(R.string.label_order_item, option)) },
                                 onClick = {
                                     isClicked = false
                                     // Launch a coroutine to call the suspend function

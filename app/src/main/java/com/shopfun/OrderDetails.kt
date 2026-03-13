@@ -135,7 +135,10 @@ fun ListOrders(context : Context, OrderByIds : List<Int>?) {
                 {
                     Text(text = stringResource(R.string.label_select_order))
                     IconButton(onClick = { expanded = !expanded }) {
-                        Icon(Icons.Default.MoreVert, contentDescription = "Open order selector")
+                        Icon(
+                            imageVector = Icons.Default.MoreVert,
+                            contentDescription = stringResource(R.string.cd_open_order_selector)
+                        )
                     }
                     if (selectedOption.value != null && selectedOption.value != "") {
                         Text(color = Color.Blue, style = TextStyle(fontSize = 20.sp),

@@ -137,7 +137,7 @@ fun ListOrders(context : Context, OrderByIds : List<Int>?) {
                     IconButton(onClick = { expanded = !expanded }) {
                         Icon(
                             imageVector = Icons.Default.MoreVert,
-                            contentDescription = "Open order selector"
+                            contentDescription = stringResource(R.string.cd_open_order_selector)
                         )
                     }
                     if (selectedOption.value != null && selectedOption.value != "") {

@@ -3,4 +3,21 @@
     <string name="title_activity_generate_order">GenerateOrder</string>
     <string name="title_activity_order_details">OrderDetails</string>
     <string name="title_activity_order_product_details">OrderProductDetails</string>
+    <string name="product_name">Product Name</string>
+    <string name="hint_enter_product_name">Enter Product Name</string>
+    <string name="product_description">Product Description</string>
+    <string name="hint_enter_product_description">Enter Product Description</string>
+    <string name="product_price">Product Price</string>
+    <string name="hint_enter_product_price">Enter Product Price</string>
+    <string name="btn_add_product">Add Product</string>
+    <string name="btn_view_products">View Products</string>
+    <string name="btn_order_products">Order Products</string>
+    <string name="btn_view_orders">View Orders</string>
+    <string name="btn_generate_order">Generate Order</string>
+    <string name="btn_go_to_products">Go to Products</string>
+    <string name="label_add_cart">Add to Cart</string>
+    <string name="label_select_order">Select Order</string>
+    <string name="label_selected_product_ids">Selected Product IDs: %1$s</string>
+    <string name="label_order_item">Order - %1$d</string>
+    <string name="cd_open_order_selector">Open order selector</string>
 </resources>
